@@ -6,7 +6,10 @@ using System.Net.Sockets;
 
 //Console.WriteLine("The result of the task #1 is: " + Task1());
 //Console.WriteLine("The result of the task #2 is: " + Task2());
-Console.WriteLine("The result of the task #3 is: " + Task3());
+//Console.WriteLine("The result of the task #3 is: " + Task3());
+//Console.WriteLine($"The result of the task #3 is: " );
+//Task5();
+
 
 
 
@@ -84,6 +87,36 @@ static string Task3()
     }
 
     return suffix;
+}
+
+
+static void Task5()
+{
+    Console.WriteLine("Enter a number:");
+    string input = Console.ReadLine();
+    if (int.TryParse(input, out int value))
+    {
+        PrintDigitsWithDashes(input, 0);
+        Console.WriteLine();
+    }
+    else
+    {
+        Console.WriteLine("Invalid input. Please enter a valid number.");
+    }
+}
+
+static void PrintDigitsWithDashes(string number, int index)
+{
+    // თუ ბოლო სიმბოლოა, უბრალოდ დაიბეჭდოს
+    if (index == number.Length - 1)
+    {
+        Console.Write(number[index]);
+        return;
+    }
+
+    Console.Write(number[index] + " - ");
+
+    PrintDigitsWithDashes(number, index + 1);
 }
 
 
