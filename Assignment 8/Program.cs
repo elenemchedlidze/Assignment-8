@@ -5,7 +5,9 @@ using System.Net.Sockets;
 
 
 //Console.WriteLine("The result of the task #1 is: " + Task1());
-Console.WriteLine("The result of the task #2 is: " + Task2());
+//Console.WriteLine("The result of the task #2 is: " + Task2());
+Console.WriteLine("The result of the task #3 is: " + Task3());
+
 
 
 static int Task1()
@@ -55,6 +57,33 @@ static int Task2()
     }
 
     return pairs;
+}
+
+static string Task3()
+{
+    Console.WriteLine("please provide the fisrt stirng:");
+    string firstString = Console.ReadLine();
+    Console.WriteLine("please provide the second stirng:");
+    string secondString = Console.ReadLine();
+    int i = firstString.Length - 1;
+    int j = secondString.Length - 1;
+    string suffix = "";
+
+    while(i >= 0 && j >= 0)
+    {
+        if (firstString[i] == secondString[j])
+        {
+            suffix = firstString[i] + suffix;
+            i--;
+            j--;
+        }
+        else
+        {
+            break;
+        }  
+    }
+
+    return suffix;
 }
 
 
