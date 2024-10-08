@@ -7,8 +7,8 @@ using System.Net.Sockets;
 //Console.WriteLine("The result of the task #1 is: " + Task1());
 //Console.WriteLine("The result of the task #2 is: " + Task2());
 //Console.WriteLine("The result of the task #3 is: " + Task3());
-//Console.WriteLine($"The result of the task #3 is: " );
-//Task5();
+Console.WriteLine($"The result of the task #3 is: " );
+Task5();
 
 
 
